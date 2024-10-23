@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
   selected: {
     color: '#fff',
     fontSize: 16,
-    marginTop: 42
+    marginTop: 16
   },
   dayText: {
     color: '#e8e8e8',
@@ -54,5 +54,11 @@ export const styles = StyleSheet.create({
     gap: 10,
     alignItems: 'center',
     overflow: 'hidden',
+  },
+  empty: {
+    color: '#fff',
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 24,
   }
 })

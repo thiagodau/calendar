@@ -136,7 +136,7 @@ export function Home() {
           data={bookings.filter(booking => booking.dates[0] === day?.dateString)}
           keyExtractor={(item) => item.id}
           ListEmptyComponent={() => (
-            <Text style={styles.selected}>Nenhuma reserva encontrada.</Text>
+            <Text style={styles.empty}>Nenhuma reserva encontrada.</Text>
           )}
           renderItem={({ item }) => (
             <Booking booking={item} onPress={() => handleOpenDetails(item.id)} />
@@ -150,9 +150,9 @@ export function Home() {
         <BottomSheetView>
           <View style={styles.bottomSheetContent} >
             {booking?.peoples.map((people, index) => (
-              <View style={styles.guest}>
+              <View key={index} style={styles.guest}>
                 <Feather name="user" size={22} />
-                <Text key={index}>Hóspede {index + 1} {people.name}</Text>
+                <Text>Hóspede {index + 1} {people.name}</Text>
               </View>
             ))}
             <View style={styles.guest}>

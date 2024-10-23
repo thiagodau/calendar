@@ -24,6 +24,6 @@ export function Booking({ booking, ...rest }: Props) {
 
   return <TouchableOpacity style={styles.container} {...rest}>
       <Text style={styles.name}>{guests} </Text>
-      <Text style={styles.text}>Observação: {booking.observation}</Text>
+      <Text style={styles.text} numberOfLines={3}>Observação: {booking.observation}</Text>
   </TouchableOpacity>
 }
