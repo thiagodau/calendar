@@ -1,5 +1,5 @@
+import { theme } from "@/theme";
 import { StyleSheet } from "react-native";
-import { todayString } from "react-native-calendars/src/expandableCalendar/commons";
 
 export const styles = StyleSheet.create({
   container: {
@@ -36,5 +36,23 @@ export const styles = StyleSheet.create({
   },
   daySelected: {
     backgroundColor: '#f06543',
+  },
+  text: {
+    color: theme.colors.white,
+    textAlign: 'center',
+  },
+  bottomSheetContent: {
+    marginTop: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingLeft: 32,
+    paddingRight: 32,
+    gap: 12
+  },
+  guest: {
+    flexDirection: 'row',
+    gap: 10,
+    alignItems: 'center',
+    overflow: 'hidden',
   }
 })
